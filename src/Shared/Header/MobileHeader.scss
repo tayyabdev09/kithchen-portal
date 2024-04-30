@@ -1,0 +1,179 @@
+#desktop-header {
+  z-index: 9;
+  position: sticky;
+  top: 0;
+  background-color: var(--white);
+  margin-left: 175px;
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 28px 29px;
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
+    h6 {
+      color: var(--text-dark);
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 24px;
+      letter-spacing: -0.108px;
+      font-family: Inter;
+      margin-bottom: 0;
+    }
+    p {
+      margin-bottom: 0;
+      color: var(--text-muted);
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: -0.078px;
+    }
+    .notifi-btn {
+      color: var(--purple);
+      text-align: right;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px;
+      letter-spacing: -0.072px;
+      border: 1px solid var(--purple) !important;
+      background-color: var(--white);
+      border-radius: 8px;
+      align-self: center;
+      padding: 7px 16px;
+
+      &:hover {
+        color: var(--white);
+        background-color: var(--purple);
+        .bell-icon {
+          color: var(--white);
+        }
+      }
+      &.active {
+        background-color: var(--purple);
+        color: var(--white);
+        .bell-icon {
+          color: var(--white);
+        }
+      }
+      .bell-icon {
+        position: relative;
+        color: var(--warning);
+        margin-left: 8px;
+        font-size: 16px;
+        .unread-label {
+          background-color: var(--danger);
+          width: 8px;
+          height: 8px;
+          border-radius: 100px;
+          position: absolute;
+          top: 4px;
+          right: 0;
+        }
+      }
+    }
+    #arrow {
+      position: absolute;
+      top: 24px;
+      right: 20px;
+      z-index: 1014;
+      opacity: 1;
+      transition: 0.3s all ease;
+      border-left: 14px solid transparent;
+      border-right: 14px solid transparent;
+      border-top: 18px solid transparent;
+      border-bottom: 18px solid var(--white);
+      filter: drop-shadow(0px -3px 3px rgba(0, 0, 0, 0.03));
+    }
+    .notifications-dropdown {
+      position: absolute;
+      width: 400px;
+      right: 0;
+      top: 60px;
+      height: 400px;
+      overflow: scroll;
+      overflow-x: hidden;
+      z-index: 9;
+      border-radius: 12px;
+      background-color: var(--white);
+      box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.05);
+      transition: opacity 2.3s ease;
+
+      &::-webkit-scrollbar {
+        width: 8px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: #dcdbdb;
+        border-radius: 100px;
+      }
+      @media (max-width: 767px) {
+        width: 350px;
+      }
+
+      .notification-detail {
+        padding: 15px;
+        h6 {
+          font-size: 16px;
+          font-weight: 600;
+        }
+        .notifi-bar {
+          margin: 20px 0;
+          display: flex;
+          img {
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+            border-radius: 100px;
+          }
+          .notifi-text {
+            font-size: 12px;
+            font-weight: normal;
+            margin-left: 10px;
+            color: var(--text-dark);
+            strong {
+              color: #000;
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .before-notifi {
+    opacity: 0;
+    transition: opacity 1.3s all ease;
+    &.active-notifi {
+      opacity: 1;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  #desktop-header {
+    margin-left: 0;
+    .header {
+      padding: 20px 15px;
+      .mobile-user-img {
+        width: 35px;
+        height: 35px;
+        object-fit: cover;
+        border-radius: 100px;
+        align-self: center;
+      }
+      .side-menu {
+        margin-right: 15px;
+        cursor: pointer;
+        align-self: center;
+      }
+      .notifi-btn {
+        border: 0;
+        .bell-icon {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+  .close-sidebar {
+    color: #000;
+    font-size: 28px;
+    text-align: right;
+  }
+}

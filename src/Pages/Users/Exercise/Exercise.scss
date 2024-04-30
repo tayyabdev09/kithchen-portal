@@ -1,0 +1,115 @@
+.exercise-main {
+  font-family: "DM Sans";
+
+  .three-pointers {
+    h1 {
+      font-family: "DM Sans";
+    }
+    .time-selection {
+      padding-top: 40px;
+      p {
+        font-size: 18px;
+        font-weight: 700;
+        color: #252525;
+        padding-bottom: 20px;
+      }
+      span {
+        font-weight: 400;
+        margin-left: 20px;
+      }
+    }
+    .goals-for-workout {
+      .gaols-card {
+        width: 164px;
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 20px;
+        margin-right: 15px;
+        .card-details {
+          margin-left: 10px;
+          .shooting {
+            font-size: 16px;
+            font-weight: 700;
+          }
+          .percent {
+            font-size: 14px;
+            font-weight: 400;
+            color: #252525;
+            opacity: 60%;
+          }
+        }
+      }
+    }
+  }
+  .exerciseTimeWorkout {
+    padding-top: 40px;
+    .exercise-modules {
+      .module {
+        border: 1px solid #e2eeec;
+        border-radius: 20px;
+        padding: 10px;
+        background-color: #f3f9f8;
+        img {
+          max-width: 100%;
+        }
+        .moduleDetails {
+          padding-left: 10px;
+          padding-bottom: 10px;
+          h5 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #252525;
+            padding-top: 20px;
+          }
+          p {
+            font-size: 16px;
+            color: #252525;
+            opacity: 60%;
+            margin-bottom: 20px;
+          }
+          .btn-custom {
+            width: 193px;
+          }
+        }
+      }
+    }
+  }
+
+  .exercise-stats {
+    .exercise-name {
+      background-color: #f3f9f8;
+      padding: 25px;
+      border-radius: 30px;
+      cursor: pointer;
+      .exercise_name {
+        font-size: 18px;
+        font-weight: bolder;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .exercise-main {
+    .three-pointers {
+      .time-selection {
+        padding-top: 20px;
+        p {
+          font-size: 14px;
+          span {
+            font-size: 14p;
+          }
+        }
+      }
+    }
+    .exerciseTimeWorkout {
+      .exercise-modules {
+        .module {
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

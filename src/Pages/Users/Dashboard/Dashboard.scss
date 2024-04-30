@@ -1,0 +1,139 @@
+.dashboard-main {
+  font-family: "DM Sans";
+  .dashboard-stats {
+    background-color: #f3f9f8;
+    border-top: 1px solid #e2eeec;
+    border-bottom: 1px solid #e2eeec;
+    padding: 25px;
+    .stat-card {
+      background-color: #fff;
+      border-radius: 30px;
+      padding: 25px;
+      box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05);
+      .card-main {
+        gap: 15px;
+        .stat-goals {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          h3 {
+            font-size: 22px;
+          }
+        }
+      }
+    }
+    .calories-card {
+      padding: 20px 25px;
+
+      .card-main {
+        justify-content: space-between;
+        align-items: center;
+      }
+      h3 {
+        font-size: 20px;
+      }
+      .calories-details {
+        font-size: 14px;
+      }
+    }
+  }
+  .workout-detail {
+    h4 {
+      margin-top: 15px;
+      margin-bottom: 0px;
+    }
+    .workout-main {
+      display: flex;
+      gap: 15px;
+      .workout {
+        border: 1px solid #ececec;
+        width: 200px;
+        padding: 30px 70px 42px;
+        border-radius: 24px;
+        position: relative;
+        margin: 40px 0px;
+        .workout-inner {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          font-family: "DM Sans";
+          span {
+            font-size: 25px;
+            font-weight: 700;
+            color: #252525;
+          }
+          p {
+            font-size: 16px;
+            font-weight: 400;
+            color: #252525;
+          }
+        }
+        .arrow-right {
+          color: #fff;
+          background-color: #55bfa9;
+          text-align: center;
+          position: absolute;
+          bottom: -19px;
+          border-radius: 50%;
+          padding: 10px 14px;
+        }
+      }
+    }
+  }
+
+  .post-workout-detail {
+    .post-workout-main {
+      .post-workout {
+        .post-workout-inner {
+          span {
+            font-size: 14px;
+            opacity: 0.6;
+          }
+        }
+      }
+    }
+  }
+
+  // All-users
+
+  // User Modal
+
+  #viewUserModal {
+    .modal-dialog {
+      .modal-content {
+        .modal-body {
+          .view-user-profile {
+            .profile-head {
+              display: flex;
+              align-items: center;
+              .user-profile-pic {
+                img {
+                  width: 100px;
+                }
+              }
+              .user-profile-name {
+                margin-left: 30px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .dashboard-stats .stat-card {
+      margin-bottom: 10px;
+    }
+    .workout-detail {
+      h4 {
+        margin-top: 5px;
+      }
+      .workout-main {
+        .workout {
+          margin: 24px 0px;
+        }
+      }
+    }
+  }
+}
